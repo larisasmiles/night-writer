@@ -8,3 +8,5 @@ class NightWrite
   def read
     file = File.open(ARGV[0], "r")
   end
+
+end

@@ -11,5 +11,4 @@ class NightWriteTest < Minitest::Test
 
     refute_equal nil, contents
   end
-
-  
+end
