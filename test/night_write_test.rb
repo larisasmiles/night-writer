@@ -13,7 +13,7 @@ class NightWriteTest < Minitest::Test
   def test_if_file_can_be_read
     n = NightWrite.new('./lib/message.txt', 'braille.txt')
 
-    refute_equal nil, n.message
+    refute_equal "hello world", n.message
   end
 
   def test_it_can_write_to_new_file
