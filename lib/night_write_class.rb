@@ -2,12 +2,16 @@ require './lib/dictionary'
 require 'pry'
 class NightWrite
 
-  attr_reader :contents
+  attr_reader :message, :output, :input
 
   def initialize(input, output)
-    @contents = File.read(input).chomp
+    @message  = File.read(input).chomp
     @input    = input
     @output   = output
-    @count    = 0
+  end
+
+  def write_to_file
+    braille = File.new(@output, "w+")
+    braille.write(message)
   end
 end
