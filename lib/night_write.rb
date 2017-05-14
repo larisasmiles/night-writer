@@ -1,12 +1,17 @@
-class NightWrite
+require './lib/night_write_class'
+require 'pry'
+n = NightWrite.new(ARGV[0], ARGV[1])
 
-  def initialize(file_name, read_or_write)
-    @file_name     = file_name
-    @read_or_write = read_or_write
-  end
+input_file  = ARGV[0]
+output_file = ARGV[1]
 
-  def read
-    file = File.open(ARGV[0], "r")
-  end
+puts "Created #{ARGV[1]} containing #{n.contents.length} characters."
 
-end
+
+
+
+
+
+# @line1 = ""
+# @line2 = ""
+# @line3 = ""
