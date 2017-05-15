@@ -11,7 +11,9 @@ class NightWrite
   end
 
   def write_to_file
-    braille = File.new(@output, "w+")
-    braille.write(message)
+    new_file = File.new(output, "w+")
+    new_file.write(@message)
+# binding.pry
+    File.read(new_file)
   end
 end
